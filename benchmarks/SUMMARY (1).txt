@@ -1,0 +1,12 @@
+Sample Benchmark Summary
+Generated: 2025-09-10T17:08:59.635206Z
+
+Environment (example):
+- Local dev machine: Intel i7-9750H, 16GB RAM, SSD
+- Go runtime: go1.21
+- Vegeta (example) used to simulate load
+
+Key results (sample):
+- In-Memory backend: peak RPS = 9200 req/s, p50 ≈ 11 ms, p95 ≈ 48 ms, error < 0.1%
+- Redis backend: peak RPS = 2800 req/s, p50 ≈ 18 ms, p95 ≈ 70 ms, error ≈ 0.5% at peak
+Note: These numbers are illustrative and intended for README presentation. Replace with real measurements when available.

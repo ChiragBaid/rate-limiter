@@ -1,0 +1,13 @@
+backend,rps,p50_ms,p95_ms,error_rate_percent
+in-memory,1000,5,20,0.0
+in-memory,2500,7,28,0.0
+in-memory,4000,9,35,0.0
+in-memory,6000,10,42,0.02
+in-memory,8000,11,46,0.05
+in-memory,9200,11,48,0.08
+redis,500,8,25,0.0
+redis,1000,10,30,0.0
+redis,1500,12,38,0.01
+redis,2000,14,50,0.05
+redis,2400,16,60,0.2
+redis,2800,18,70,0.5
