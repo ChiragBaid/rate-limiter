@@ -51,7 +51,7 @@ rate-limiter/
 go run ./cmd/server
 # server listens on :8080
 curl http://localhost:8080/hello
-
+```
 ---
 
 docker run -d -p 6379:6379 redis
@@ -111,7 +111,7 @@ if allowed {
 } else {
     fmt.Println("Rate limit exceeded")
 }
-
+```
 ---
 
 ```markdown
@@ -120,7 +120,7 @@ if allowed {
 - **Distributed mode** → Redis backend here is simplified (HGET/HSET). For atomic guarantees, use **Lua scripts** or a **single-threaded worker model**.  
 - **Performance** → in-memory mode can sustain ~9k RPS on commodity hardware. Redis adds network + serialization overhead.  
 - **Extensibility** → `Store` interface can support other backends (e.g., PostgreSQL, DynamoDB, etc.).
-
+```
 ---
 
 ## 🔮 Future Work
