@@ -66,7 +66,6 @@ curl -i http://localhost:8080/hello
 
 # 5️⃣ Benchmarks Section
 
-```markdown
 ## 📊 Benchmarks (Sample Results)
 
 Benchmarks were simulated using [Vegeta](https://github.com/tsenart/vegeta) with 10s runs on a local dev machine:
