@@ -1,4 +1,4 @@
-# rate-limiter — High-Performance Token-Bucket Rate Limiter (Go)
+# Rate-limiter: High-Performance Token-Bucket Rate Limiter (Go)
 
 **A production-minded, pluggable rate-limiter service implemented in Go.**  
 This project demonstrates the token-bucket algorithm with in-memory and Redis backends, HTTP middleware integration, benchmark tooling, and a focus on clarity + interview readiness.
