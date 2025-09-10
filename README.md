@@ -16,6 +16,7 @@ This project demonstrates the token-bucket algorithm with in-memory and Redis ba
 
 ## 📂 Repository Layout
 
+<pre>
 rate-limiter/
 ├─ cmd/
 │  └─ server/
@@ -39,7 +40,7 @@ rate-limiter/
 ├─ README.md
 └─ .github/
    └─ workflows/ci.yml
-
+</pre>
 
 ---
 
