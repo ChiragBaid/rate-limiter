@@ -54,20 +54,22 @@ curl http://localhost:8080/hello
 ```
 ---
 
+### Run with Redis
 docker run -d -p 6379:6379 redis
 REDIS_ADDR=localhost:6379 go run ./cmd/server
 
 ---
-
+### Demo: Exceeding Rate Limit
+```bash
 curl -i http://localhost:8080/hello
-curl -i http://localhost:8080/hello
+```
 # Eventually returns 429 Too Many Requests
 
 ---
 
-```markdown
-## 📊 Benchmarks (Sample Results)
 
+## 📊 Benchmarks (Sample Results)
+```markdown
 Benchmarks were simulated using [Vegeta](https://github.com/tsenart/vegeta) with 10s runs on a local dev machine:
 
 - **Machine:** Intel i7-9750H, 16GB RAM, SSD  
@@ -75,15 +77,15 @@ Benchmarks were simulated using [Vegeta](https://github.com/tsenart/vegeta) with
 - **Redis:** 6.2 (Docker, single instance)  
 
 | Backend   | Peak RPS | Avg Latency (p50) | p95 Latency | Error Rate |
-|-----------|----------|-------------------:|------------:|-----------:|
-| In-Memory | ~9,200   | 11 ms              | 48 ms       | <0.1%     |
-| Redis     | ~2,800   | 18 ms              | 70 ms       | ~0.5%     |
+|-----------|----------|-------------------|-------------|------------|
+| In-Memory | ~9,200   | 11 ms             | 48 ms       | <0.1%      |
+| Redis     | ~2,800   | 18 ms             | 70 ms       | ~0.5%      |
 
 📈 Latency vs RPS graph:  
 ![Benchmark Results](benchmarks/report_plot.png)
 
 📉 [Download raw benchmark data](benchmarks/sample_report.csv)
-
+```
 ---
 
 ## 🏗️ Architecture
